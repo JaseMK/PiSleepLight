@@ -2,12 +2,15 @@ import datetime
 import time
 
 localFlags = {'red': 0, 'green': 0, 'override': 0}
-localTimings = {'wakeTime': datetime.time(14,15), 'sleepTime': datetime.time(15,14), 'overrideTime': datetime.time(7,30)}
+localTimings = {'wakeTime': datetime.time(7,00), 'sleepTime': datetime.time(19,00), 'overrideTime': datetime.time(7,30)}
 
 def getFlags ():
     tempFlags = {'red': 1, 'green': 0, 'override': 0}
     return tempFlags
 
+def getTimings ():
+    tempTimings = {'wakeTime': datetime.time(14,15), 'sleepTime': datetime.time(14,20), 'overrideTime': datetime.time(7,30)}
+    return tempTimings
 
 def checkStatus (tempFlags, tempTimings):
     newFlags = tempFlags
@@ -57,6 +60,7 @@ def setLights (tempFlags):
         print "override off"
 
 localFlags = getFlags()
+localTimings = getTimings()
 
 newTime = datetime.time(19,45)
 print newTime
