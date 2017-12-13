@@ -19,7 +19,7 @@ def getFlags ():
 
 def getTimings ():
     tempTimings = {'wakeTime': datetime.time(20,48), 'sleepTime': datetime.time(20,50), 'overrideTime': datetime.time(7,30)}
-    db = MySQLdb.connect(host="192.168.1.89", user="sleepdb", passwd="sleepdbpass", db="sleepdb")
+    db = MySQLdb.connect(host="192.168.1.89", user="sleepdb", passwd="xxxx", db="sleepdb")
     # you must create a Cursor object. It will let
     #  you execute all the queries you need
     cur = db.cursor() 
